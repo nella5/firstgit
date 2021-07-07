@@ -126,7 +126,7 @@ fastify.get('/users', async (request, reply) => {
 fastify.post('/me', function () {
 	return {
 		prenom: 'ornella',
-		nom: 'lisongo',
+		nom: 'lisongogit ',
 		job: 'developpeur',
 	}
 })
