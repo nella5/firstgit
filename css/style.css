@@ -1,0 +1,417 @@
+* {
+    font-family: "Montserrat";
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 0 10%;
+}
+
+.logo {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav {
+    width: 75%;
+}
+
+.nav > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav ul li {
+    list-style-type: none;
+}
+
+.nav > ul > li {
+    position: relative;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 12.5px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+
+.nav > ul > li > a:hover { /* hover sur les a */
+    border-color: red;
+}
+
+.nav #arrow {
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 5px;
+    font-size: 10px;
+    position: relative;
+    top: -3px;
+}
+
+.nav .submenu {
+    padding-left: 0;
+    position: absolute;
+    left: 0;
+    border-top: 10px solid transparent;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s;
+    /*display: none; on cache le submenu */
+}
+
+.nav > ul > li:hover .submenu { /* hover sur les li */
+    height: 75px;
+}
+
+.nav .submenu li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 20px;
+    white-space: nowrap;
+}
+
+.nav .submenu li:first-child {
+    border-bottom: 0;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.banner {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(237, 20, 91, 0.2), rgba(237, 20, 91, 0.2)),url(https://www.cssigniter.com/preview/roxima/files/2015/12/slider-1920x800.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner .message {
+    width: 75%;
+    text-align: center;
+}
+
+.banner .message h1 {
+    color: #fff;
+    font-size: 45px;
+    margin-bottom: 0;
+}
+
+.banner .message p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: #efefef;
+    font-size: 18px;
+}
+
+.banner .message a {
+    color: #fff;
+    background-color: #ED145B;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.banner .message a:hover {
+    background-color: #f1437c;
+
+}
+
+.offers {
+    padding-top: 30px;
+}
+
+.titles {
+    text-align: center;
+}
+
+.titles h2 {
+    color: #515151;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.titles p {
+    color: #515151;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.offers-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1020px;
+    margin: 70px auto;
+}
+
+.offers-item {
+    width: 22%;
+}
+
+.offers-item i {
+    color: #e8e2e2;
+    font-size: 50px;
+}
+
+.offers-item h3 {
+    color: #515151;
+    font-size: 20px;
+}
+
+.offers-item div {
+    background-color: #ED145B;
+    height: 3px;
+    width: 30px;
+}
+
+.offers-item p {
+    font-size: 14px;
+    color: #515151;
+}
+
+@media screen and (max-width: 1030px) { /* En dessous 1030px ; le code va s'activer */
+    .offers-container {
+        width: 90%;
+        flex-wrap: wrap; /* indique au flex qu'il peut se couper */
+    }
+    .offers-item {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .header {
+        padding: 20px 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .offers-container {
+        display: block;
+    }
+    .offers-item {
+        width: 100%;
+    }
+}
+
+.banner2 {
+    height: 500px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(237, 20, 91, 0.2), rgba(237, 20, 91, 0.2)),url(https://www.partir-a-new-york.com/wp-content/uploads/2014/05/5eme-avenue-shopping-new-york-city.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner2 .message2{
+    width: 75%;
+    text-align: center;
+}
+
+.banner2 .message2 h2 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.banner2 .message2 p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: #efefef;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.banner2 .message2 a {
+    color: #fff;
+    background-color: #ED145B;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.banner2 .message2 a:hover {
+    background-color: #f1437c;
+}
+.message3 .team {
+    color:#575454;
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 25px;
+    text-align: center;
+   
+}
+
+.message3 p {
+    color:grey;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.box {
+    
+    display: flex;
+    justify-content: space-around;
+           
+  }
+  
+  .picture1 {
+    width: 150px;
+    height: 150px;
+    background-image: url(https://www.cssigniter.com/preview/roxima/files/2015/12/uberto_about-165x165.png);
+    border-radius: 90%;
+    margin-top: 40px;
+    margin-top: 20px;
+    transition: all 0.6s;
+              
+}
+
+.picture1:hover{
+    height: 171px;
+    
+}
+
+.box .name {
+    color:1px solid black;
+    font-weight: bold;
+    margin-top: 150px;
+    text-align-last: center;
+        
+}
+
+.picture1 .name p {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.picture2 {
+    width: 150px;
+    height: 150px;
+    background-image: url(https://www.cssigniter.com/preview/roxima/files/2015/12/lawyer1-165x165.jpg);
+    border-radius: 90%;
+    margin-top: 40px ;
+    margin-top: 20px;
+    transition: all 0.6s;
+   
+}
+
+.picture2:hover{
+    height: 171px;
+}
+
+
+.box .name2 {
+    color:1px solid black;
+    font-weight: bold;
+    margin-top: 150px;
+    text-align-last: center;
+             
+}
+
+
+.picture2 .name2 p {
+    color: 1px solid black;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.picture3 {
+    width: 150px;
+    height: 150px;
+    background-image: url( https://www.cssigniter.com/preview/roxima/files/2015/12/photo-280x280-165x165.png);
+    border-radius: 90%;
+    margin-top: 40px;
+    margin-top: 20px;
+    transition:all 0.6s;
+        
+}
+
+.picture3:hover{
+    height: 171px;
+}
+
+
+.box .name3 {
+    color:1px solid black;
+    font-weight: bold;
+    margin-top: 150px;
+    text-align-last: center;
+         
+}
+
+.box .picture3 .name3 p {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.picture4 {
+    width: 150px;
+    height: 150px;
+    background-image: url(https://www.cssigniter.com/preview/roxima/files/2015/12/kate-165x165.jpg);
+    border-radius: 90%;
+    margin-top: 40px;
+    margin-top: 20px;
+    transition: all 0.6s;
+      
+}
+
+.picture4:hover{
+    height: 171px;
+}
+
+
+.box .name4 {
+    color:1px solid black;
+    font-weight: bold;
+    margin-top: 150px;
+    text-align-last: center;
+    }
+
+
+.box .picture3 .name3 p {
+        text-align: center;
+        margin-top: 20px;
+    
+    }
+
+.box:hover{
+    background-color: #ED145B;
+}
+
+ 
+
+     
+ 
+
+
+
+
+
